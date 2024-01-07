@@ -1,1 +1,1 @@
-# Compression-Tool
+# Compression-Tool Using Huffman Encoding Algorithm
