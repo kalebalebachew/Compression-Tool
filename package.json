@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/kalebalebachew/Compression-Tool/issues"
   },
-  "homepage": "https://github.com/kalebalebachew/Compression-Tool#readme"
+  "homepage": "https://github.com/kalebalebachew/Compression-Tool#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  }
 }
