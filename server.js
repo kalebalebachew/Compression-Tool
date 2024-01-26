@@ -4,10 +4,12 @@ const dotenv = require('dotenv').config();
 const port = process.env.PORT || 5000;
 const multer = require('multer');
 
+
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
 app.use(express.json());
+app.set('view engine', 'ejs');
 
 
 class Node {
@@ -75,12 +77,15 @@ app.post('/compress', upload.single('file'), (req, res) => {
     
     const compressedData = huffmanEncode(fileString, huffmanCodes);
 
-    res.send({ compressedData });
+    res.render('compress', { compressedData });
   } catch (error) {
     console.error(error);
     res.status(500).send({ error: 'Internal Server Error' });
   }
 });
+app.get('/', (req, res) => {
+  res.render('compress')
+})
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
