@@ -19,7 +19,7 @@
   "homepage": "https://github.com/kalebalebachew/Compression-Tool#readme",
   "dependencies": {
     "dotenv": "^16.3.1",
-    "ejs": "^3.1.9",
+
     "multer": "^1.4.5-lts.1"
   },
   "devDependencies": {
